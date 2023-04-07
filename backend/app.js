@@ -27,3 +27,7 @@ app.use("/api/v2/todos", taskRouter);
 
 // error handling middleware
 app.use(errorMiddleware);
+
+app.get("/", (req, res) => {
+  res.send("Server Working Properly");
+});
