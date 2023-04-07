@@ -1,7 +1,7 @@
 
 import mongoose from "mongoose";
 
-const DB_URL = process.env.MONGO_URL;
+const DB_URL = process.env.MONGO_URL || "mongodb://127.0.0.1:27017/nodeApi";
 
 export const connectDB = mongoose
   .connect(DB_URL)
