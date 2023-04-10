@@ -23,7 +23,7 @@ app.use(cors({
 
 // Router
 app.use("/api/v1/users", userRouter);
-app.use("/api/v2/todos", taskRouter);
+app.use("/api/v1/todos", taskRouter);
 
 // error handling middleware
 app.use(errorMiddleware);

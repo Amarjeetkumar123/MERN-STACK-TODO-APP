@@ -10,18 +10,21 @@ import { Context } from ".";
 import server from ".";
 import axios from "axios";
 function App() {
-  const { setUser, setIsAuthenticated } = useContext(Context);
+  const { setUser, setIsAuthenticated,setLoading } = useContext(Context);
 
   useEffect(() => {
+    setLoading(true)
     axios
       .get(`${server}/users/myProfile`, { withCredentials: true })
       .then((res) => {
         setUser(res.data.user);
         setIsAuthenticated(true);
+        setLoading(false)
       })
       .catch((err) => {
         setUser({});
         setIsAuthenticated(false);
+        setLoading(false);
       });
   }, []);
 
