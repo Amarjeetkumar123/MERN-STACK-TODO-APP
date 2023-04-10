@@ -27,20 +27,20 @@ const Header = () => {
 
   return (
     <>
-      <nav className="container-fluid bg-gray-800 px-5 py-2 text-white flex justify-between align-middle">
+      <nav className=" bg-[#20354b] px-4 sm:px-10 py-2 text-white flex justify-between items-center">
         <div>
-          <h1 className="text-2xl">Todo App</h1>
+          <h1 className="text-xl sm:text-2xl">Todo App</h1>
         </div>
         <div className="text-xl w-48 flex justify-between align-middle mx-11">
           <Link
             to={"/"}
-            className="rounded-none px-4 py-1 hover:bg-white hover:text-gray-800"
+            className="rounded-none px-4 py-1 hover:bg-white hover:text-[#20354b]"
           >
             Home
           </Link>
           <Link
             to={"/profile"}
-            className="rounded-none px-4 py-1 hover:bg-white hover:text-gray-800"
+            className="rounded-none px-4 py-1 hover:bg-white hover:text-[#20354b]"
           >
             Profile
           </Link>
@@ -58,7 +58,7 @@ const Header = () => {
               <button
                 onClick={logoutHandler}
                 disabled={loading}
-                className="rounded-none px-4 py-1 hover:bg-white hover:text-gray-800"
+                className="rounded-none px-4 py-1 hover:bg-white hover:text-[#20354b]"
               >
                 Logout
               </button>
@@ -66,7 +66,7 @@ const Header = () => {
           ) : (
             <Link
               to={"/login"}
-              className="rounded-none px-4 py-1 hover:bg-white hover:text-gray-800"
+              className="rounded-none px-4 py-1 hover:bg-white hover:text-[#20354b]"
             >
               Login
             </Link>

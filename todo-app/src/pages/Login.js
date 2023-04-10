@@ -4,6 +4,7 @@ import server, { Context } from "..";
 
 import axios from "axios";
 import { toast } from "react-hot-toast";
+import Loader from "../components/Loader";
 
 const Login = () => {
   const { isAuthenticated, setIsAuthenticated, loading, setLoading } =
@@ -51,7 +52,7 @@ const Login = () => {
           className=" shadow-xl shadow-gray-400 px-3 py-10 rounded"
         >
           <div className="sm:col-span-3 mb-4">
-            <label for="email" class="block text-xl leading-6 text-gray-800">
+            <label for="email" class="block text-xl leading-6 text-[#20354b]">
               Email
             </label>
             <div className="mt-2">
@@ -69,7 +70,7 @@ const Login = () => {
             </div>
           </div>
           <div className="sm:col-span-3">
-            <label for="password" class="block text-xl leading-6 text-gray-800">
+            <label for="password" class="block text-xl leading-6 text-[#20354b]">
               Password
             </label>
             <div class="mt-2">
@@ -88,23 +89,17 @@ const Login = () => {
           </div>
           <div class="mt-12 flex justify-center flex-col items-center ">
             {loading ? (
-              <button
-                type="submit"
-                disabled
-                class="rounded bg-gray-400 px-12 py-2 text-xl font-semibold text-white shadow-sm "
-              >
-                Login
-              </button>
+              <Loader/>
             ) : (
               <button
                 type="submit"
-                class="rounded bg-gray-800 px-12 py-2 text-xl font-semibold text-white shadow-sm hover:bg-indigo-600"
+                class="rounded bg-[#20354b] px-12 py-2 text-xl font-semibold text-white hover:text-green-600 hover:bg-white hover:border hover:border-green-600  "
               >
                 Login
               </button>
             )}
 
-            <h4 className="my-4 text-gray-800 font-bold text-xl">Or</h4>
+            <h4 className="my-4 text-[#20354b] font-bold text-xl">Or</h4>
             <Link
               to={"/register"}
               className="text-indigo-600 visited:text-purple-600..."
