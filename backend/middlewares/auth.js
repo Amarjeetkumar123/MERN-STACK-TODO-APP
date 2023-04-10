@@ -7,7 +7,7 @@ export const isAuthenticated = async (req, res, next) => {
   if (!token)
     return res.status(404).json({
       success: false,
-      message: "Not Logged In  => go to login first",
+      message: "Login first",
     });
 
   // Decode the id from the cookie
