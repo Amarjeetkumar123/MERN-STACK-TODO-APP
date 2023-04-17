@@ -17,6 +17,7 @@ function App() {
     axios
       .get(`${server}/users/myProfile`, { withCredentials: true })
       .then((res) => {
+        console.log(res.data.user)
         setUser(res.data.user);
         setIsAuthenticated(true);
         setLoading(false)
